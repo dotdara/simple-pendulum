@@ -15,7 +15,7 @@ int main(int argc, char **argv) {
     NOB_GO_REBUILD_URSELF(argc, argv);
     
     cc();
-    cmd_append(&cmd, "-o", "./main", "main.c");
+    cmd_append(&cmd, "-o", "./main", "main.c", "pendulum.c", "render.c");
     // cmd_append(&cmd, "-lplplot");
     cmd_append(&cmd, "-lraylib", "-lGL", "-lm", "-lpthread", "-ldl", "-lrt", "-lX11");
     if (!cmd_run(&cmd)) return 1;
