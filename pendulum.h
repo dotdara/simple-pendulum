@@ -5,5 +5,10 @@ typedef struct {
     double angular_velocity;
 } StateVec;
 
+typedef struct {
+    StateVec state;
+    double length;
+} Pendulum;
+
 StateVec state_create(double initial_angle);
-void     state_step_rk4(StateVec *s, double dt);
+void pendulum_step(Pendulum *pendulum, double g, double dt);
